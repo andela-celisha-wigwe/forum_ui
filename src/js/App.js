@@ -1,17 +1,20 @@
-'use-strict';
+'use strict'
 
 import React from 'react'
 import Header from './components/Header'
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import Footer from './components/Footer'
+import Message from './components/Message'
 
-class App extends React.Component {
-  render() {
+export class App extends React.Component {
+  render () {
     return (
-      <div className="container">
+      <MuiThemeProvider>
         <Header />
-        	{ this.renderChildren() }
+        <Message />
+        { this.renderChildren() }
         <Footer />
-      </div>
+      </MuiThemeProvider>
     )
   }
 }

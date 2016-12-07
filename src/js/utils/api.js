@@ -14,7 +14,7 @@ export default {
   put (path, data) {
     return this.wrapCall(request.put(this.root + path, data))
   },
-  wrapCall(req) {
+  wrapCall (req) {
     return new Promise((resolve, reject) => {
       req
         .withCredentials()
@@ -22,8 +22,8 @@ export default {
           if (res.statusCode >= 400 || err) {
             return reject(Object.assign(res, { err }))
           }
-          resolve(res.body);
-        });
-    });
+          resolve(res.body)
+        })
+    })
   }
 }

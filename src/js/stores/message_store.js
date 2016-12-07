@@ -1,4 +1,4 @@
-'use strict';
+'use strict'
 
 import Reflux from 'reflux'
 
@@ -9,11 +9,11 @@ export default Reflux.createStore({
   init () {
     // List for every messageRequestion action
     // And fire onMessageRequest with the data of the action
-    this.listenTo(MessageAction.messageRequest, this.onMessageRequest);
-  }
-  
+    this.listenTo(MessageAction.messageRequest, this.onMessageRequest)
+  },
+
   // Trigger all the listeners with the new message
-  onMessageRequest(message) {
-    this.trigger(message);
+  onMessageRequest (message) {
+    this.trigger(message)
   }
 })
