@@ -4,7 +4,6 @@
 		"react"
 	],
 	"plugins": [
-		"transform-react-jsx",
-		"react-hot-loader/babel"
+		"transform-react-jsx"
 	]
 }

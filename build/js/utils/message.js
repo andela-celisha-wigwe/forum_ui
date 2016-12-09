@@ -19,13 +19,13 @@ exports.default = {
   one: function one(post, id) {
     return _api2.default.get('/posts/' + post + '/messages/' + id);
   },
-  edit: function edit(post, id, message_update) {
-    return _api2.default.put('/posts/' + post + '/messages/' + id, message_update);
+  edit: function edit(post, id, messageUpdate) {
+    return _api2.default.put('/posts/' + post + '/messages/' + id, messageUpdate);
   },
   del: function del(post, id) {
     return _api2.default.del('/posts/' + post + '/messages/' + id);
   },
-  create: function create(post, new_message) {
-    return _api2.default.post('/posts/' + post + '/messages', new_message);
+  create: function create(post, newMessage) {
+    return _api2.default.post('/posts/' + post + '/messages', newMessage);
   }
 };

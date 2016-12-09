@@ -3,7 +3,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import Routes from './Routes'
+import Routes from './routes'
 
 if (process.env.NODE_ENV === 'development') {
   // Enable React devtools
