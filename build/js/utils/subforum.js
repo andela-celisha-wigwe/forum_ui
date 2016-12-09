@@ -19,13 +19,13 @@ exports.default = {
   one: function one(id) {
     return _api2.default.get('/subforums/' + id);
   },
-  edit: function edit(id, new_content) {
-    return _api2.default.put('/subforums/' + id, new_content);
+  edit: function edit(id, subforumUpdate) {
+    return _api2.default.put('/subforums/' + id, subforumUpdate);
   },
   del: function del(id) {
     return _api2.default.del('/subforums/' + id);
   },
-  create: function create(new_content) {
-    return _api2.default.post('/subforums', new_content);
+  create: function create(newSubforum) {
+    return _api2.default.post('/subforums', newSubforum);
   }
 };

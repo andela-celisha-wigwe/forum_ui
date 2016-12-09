@@ -8,9 +8,9 @@ var _reactDom = require('react-dom');
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _Routes = require('./Routes');
+var _routes = require('./routes');
 
-var _Routes2 = _interopRequireDefault(_Routes);
+var _routes2 = _interopRequireDefault(_routes);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -19,4 +19,4 @@ if (process.env.NODE_ENV === 'development') {
   window.React = _react2.default;
 }
 
-_reactDom2.default.render(_Routes2.default, document.getElementById('app'));
+_reactDom2.default.render(_routes2.default, document.getElementById('app'));
