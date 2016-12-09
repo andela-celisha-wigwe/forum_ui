@@ -4,11 +4,11 @@ import React from 'react'
 // import path from 'path'
 import {Router, Route, IndexRoute, browserHistory} from 'react-router'
 
-import App from './controllers/App'
-import HomePage from './controllers/HomePage'
-import SubforumPage from './controllers/SubforumPage'
-import PostPage from './controllers/PostPage'
-import NoMatch from './controllers/NoMatch'
+import App from './App'
+import HomePage from './components/HomePage'
+import SubforumPage from './components/SubforumPage'
+import PostPage from './components/PostPage'
+import NoMatch from './components/NoMatch'
 
 export default (
   // Write the routes
