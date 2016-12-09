@@ -3,5 +3,9 @@
 import Reflux from 'reflux'
 
 export default Reflux.createAction([
-  'subforumRequest'
+  'listSubforums',
+  'viewSubforum',
+  'updateSubforum',
+  'createSubforum',
+  'deleteSubforum'
 ])

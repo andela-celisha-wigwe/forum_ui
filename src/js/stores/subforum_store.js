@@ -1,16 +1,62 @@
 'use strict'
 
+import SubforumAPI from '../utils/subforum'
 import Reflux from 'reflux'
 
-import SubforumAction from './subforum_action'
+import SubforumAction from '../actions/subforum_action'
+import AlertAction from '../actions/alert_action'
 
 export default Reflux.createStore({
   // On creation
   init () {
-    this.listenTo(SubforumAction.messageRequest, this.onSubforumRequest)
+    this.listenTo(SubforumAction.listSubforums, this.onListSubforums)
+    this.listenTo(SubforumAction.viewSubforum, this.onViewSubforum)
+    this.listenTo(SubforumAction.updateSubforum, this.onUpdateSubforum)
+    this.listenTo(SubforumAction.createSubforum, this.onCreateSubforum)
+    this.listenTo(SubforumAction.deleteSubforum, this.onDeleteSubforum)
   },
 
-  onSubforumRequest (subforum) {
-    this.trigger(subforum)
+  onListSubforums () {
+  	SubforumAPI.all()
+  	.then((subforums) => {
+  		this.trigger(subforums)
+  	})
+  	.catch(this.showError)
+  },
+
+  onViewSubforum (subforum_id) {
+  	SubforumAPI.view(subforum_id)
+  	.then((subforum) => {
+  		this.trigger(subforum)
+  	})
+  	.catch(this.showError)
+  },
+
+  onUpdateSubforum (subforum_id, subforumUpdate) {
+    SubforumAPI.update(subforum_id, subforumUpdate)
+  	.then((subforum) => {
+  		this.trigger(subforum)
+  	})
+  	.catch(this.showError)
+  },
+
+  onCreateSubforum (newSubforum) {
+    SubforumAPI.create(newSubforum)
+  	.then((subforum) => {
+  		this.trigger(subforum)
+  	})
+  	.catch(this.showError)
+  },
+
+  onDeleteSubforum (subforum_id) {
+    SubforumAPI.del(subforum_id)
+  	.then(() => {
+  		this.trigger(true)
+  	})
+  	.catch(this.showError)
+  },
+
+  showError(err) {
+  	AlertAction.alertError(`There was a problem. ${err}`)
   }
 })

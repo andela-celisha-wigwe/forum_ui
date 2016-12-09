@@ -3,5 +3,6 @@
 import Reflux from 'reflux'
 
 export default Reflux.createAction([
-  'alertRequest'
+  'alertRequest',
+  'alertError'
 ])

@@ -16,10 +16,10 @@ exports.default = {
   all: function all() {
     return _api2.default.get('/subforums');
   },
-  one: function one(id) {
+  view: function view(id) {
     return _api2.default.get('/subforums/' + id);
   },
-  edit: function edit(id, subforumUpdate) {
+  update: function update(id, subforumUpdate) {
     return _api2.default.put('/subforums/' + id, subforumUpdate);
   },
   del: function del(id) {
