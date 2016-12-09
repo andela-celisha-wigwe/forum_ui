@@ -3,3 +3,13 @@ https://material.google.com/
 http://www.material-ui.com/#/components/subheader
 http://www.material-ui.com/#/components/snackbar
 https://webpack.js.org/guides/hmr-react/
+
+
+- buttons and links #4dcadd with #ffff content
+- background #ffffff
+- menu background #30445C
+- menu content #ffffff
+- other content - #333333
+
+fixed top menu
+- 
