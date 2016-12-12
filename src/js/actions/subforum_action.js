@@ -2,7 +2,7 @@
 
 import Reflux from 'reflux'
 
-export default Reflux.createAction([
+export default Reflux.createActions([
   'listSubforums',
   'viewSubforum',
   'updateSubforum',

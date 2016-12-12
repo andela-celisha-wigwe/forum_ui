@@ -16,10 +16,10 @@ exports.default = {
   all: function all(post) {
     return _api2.default.get('/posts/' + post + '/messages');
   },
-  one: function one(post, id) {
+  view: function view(post, id) {
     return _api2.default.get('/posts/' + post + '/messages/' + id);
   },
-  edit: function edit(post, id, messageUpdate) {
+  update: function update(post, id, messageUpdate) {
     return _api2.default.put('/posts/' + post + '/messages/' + id, messageUpdate);
   },
   del: function del(post, id) {

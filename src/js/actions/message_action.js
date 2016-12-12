@@ -2,6 +2,10 @@
 
 import Reflux from 'reflux'
 
-export default Reflux.createAction([
-  'messageRequest'
+export default Reflux.createActions([
+  'listMessages',
+  'viewMessage',
+  'createMessage',
+  'updateMessage',
+  'deleteMessage'
 ])

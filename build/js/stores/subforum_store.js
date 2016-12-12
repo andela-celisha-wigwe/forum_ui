@@ -38,17 +38,17 @@ exports.default = _reflux2.default.createStore({
       _this.trigger(subforums);
     }).catch(this.showError);
   },
-  onViewSubforum: function onViewSubforum(subforum_id) {
+  onViewSubforum: function onViewSubforum(subforumId) {
     var _this2 = this;
 
-    _subforum2.default.view(subforum_id).then(function (subforum) {
+    _subforum2.default.view(subforumId).then(function (subforum) {
       _this2.trigger(subforum);
     }).catch(this.showError);
   },
-  onUpdateSubforum: function onUpdateSubforum(subforum_id, subforumUpdate) {
+  onUpdateSubforum: function onUpdateSubforum(subforumId, subforumUpdate) {
     var _this3 = this;
 
-    _subforum2.default.update(subforum_id, subforumUpdate).then(function (subforum) {
+    _subforum2.default.update(subforumId, subforumUpdate).then(function (subforum) {
       _this3.trigger(subforum);
     }).catch(this.showError);
   },
@@ -59,10 +59,10 @@ exports.default = _reflux2.default.createStore({
       _this4.trigger(subforum);
     }).catch(this.showError);
   },
-  onDeleteSubforum: function onDeleteSubforum(subforum_id) {
+  onDeleteSubforum: function onDeleteSubforum(subforumId) {
     var _this5 = this;
 
-    _subforum2.default.del(subforum_id).then(function () {
+    _subforum2.default.del(subforumId).then(function () {
       _this5.trigger(true);
     }).catch(this.showError);
   },

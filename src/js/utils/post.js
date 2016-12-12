@@ -6,10 +6,10 @@ export default {
   all (subforum) {
     return API.get(`/subforums/${subforum}/posts`)
   },
-  one (subforum, id) {
+  view (subforum, id) {
     return API.get(`/subforums/${subforum}/posts/${id}`)
   },
-  edit (subforum, id, postUpdate) {
+  update (subforum, id, postUpdate) {
     return API.put(`/subforums/${subforum}/posts/${id}`, postUpdate)
   },
   del (subforum, id) {

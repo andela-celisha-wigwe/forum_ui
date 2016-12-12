@@ -23,9 +23,9 @@ var _Footer = require('./components/Footer');
 
 var _Footer2 = _interopRequireDefault(_Footer);
 
-var _Message = require('./components/Message');
+var _Alert = require('./components/Alert');
 
-var _Message2 = _interopRequireDefault(_Message);
+var _Alert2 = _interopRequireDefault(_Alert);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -51,7 +51,7 @@ var App = exports.App = function (_React$Component) {
         _MuiThemeProvider2.default,
         null,
         _react2.default.createElement(_Header2.default, null),
-        _react2.default.createElement(_Message2.default, null),
+        _react2.default.createElement(_Alert2.default, null),
         this.renderChildren(),
         _react2.default.createElement(_Footer2.default, null)
       );

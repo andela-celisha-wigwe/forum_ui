@@ -2,7 +2,7 @@
 
 import Reflux from 'reflux'
 
-import AlertAction from './alert_action'
+import AlertAction from '../actions/alert_action'
 
 export default Reflux.createStore({
   // On creation

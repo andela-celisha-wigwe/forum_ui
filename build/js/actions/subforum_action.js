@@ -10,4 +10,4 @@ var _reflux2 = _interopRequireDefault(_reflux);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-exports.default = _reflux2.default.createAction(['listSubforums', 'viewSubforum', 'updateSubforum', 'createSubforum', 'deleteSubforum']);
+exports.default = _reflux2.default.createActions(['listSubforums', 'viewSubforum', 'updateSubforum', 'createSubforum', 'deleteSubforum']);

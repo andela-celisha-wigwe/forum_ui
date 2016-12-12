@@ -13,3 +13,5 @@ https://webpack.js.org/guides/hmr-react/
 
 fixed top menu
 - 
+
+curl -H "Origin: http://example.com" --verbose http://localhost:3000/subforums

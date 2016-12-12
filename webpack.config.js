@@ -1,7 +1,8 @@
-const { resolve } = require('path');
-const webpack = require('webpack');
+const { resolve } = require('path')
+const HTMLWebpackPlugin = require("html-webpack-plugin")
+const webpack = require('webpack')
 
-const APP_DIR = resolve(__dirname, 'build');
+const APP_DIR = resolve(__dirname, 'build')
 
 module.exports = {
   entry: [
@@ -20,7 +21,7 @@ module.exports = {
     filename: 'bundle.js',
     // the output bundle
     path: resolve(__dirname, 'dist'),
-    publicPath: '/'
+    // publicPath: '/'
     // necessary for HMR to know where to load the hot update chunks
   },
   context: APP_DIR,
@@ -53,5 +54,9 @@ module.exports = {
     // activates HMR
     new webpack.NamedModulesPlugin(),
     // prints more readable module names in the browser console on HMR updates
+    new HTMLWebpackPlugin({
+      template: __dirname + "/src/index.html",
+      filename: __dirname + "/dist/index.html"
+    })
   ],
-};
+}

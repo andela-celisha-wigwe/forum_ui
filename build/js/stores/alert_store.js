@@ -8,7 +8,7 @@ var _reflux = require('reflux');
 
 var _reflux2 = _interopRequireDefault(_reflux);
 
-var _alert_action = require('./alert_action');
+var _alert_action = require('../actions/alert_action');
 
 var _alert_action2 = _interopRequireDefault(_alert_action);
 

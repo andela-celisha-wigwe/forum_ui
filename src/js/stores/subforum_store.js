@@ -24,16 +24,16 @@ export default Reflux.createStore({
   	.catch(this.showError)
   },
 
-  onViewSubforum (subforum_id) {
-  	SubforumAPI.view(subforum_id)
+  onViewSubforum (subforumId) {
+  	SubforumAPI.view(subforumId)
   	.then((subforum) => {
   		this.trigger(subforum)
   	})
   	.catch(this.showError)
   },
 
-  onUpdateSubforum (subforum_id, subforumUpdate) {
-    SubforumAPI.update(subforum_id, subforumUpdate)
+  onUpdateSubforum (subforumId, subforumUpdate) {
+    SubforumAPI.update(subforumId, subforumUpdate)
   	.then((subforum) => {
   		this.trigger(subforum)
   	})
@@ -48,15 +48,15 @@ export default Reflux.createStore({
   	.catch(this.showError)
   },
 
-  onDeleteSubforum (subforum_id) {
-    SubforumAPI.del(subforum_id)
+  onDeleteSubforum (subforumId) {
+    SubforumAPI.del(subforumId)
   	.then(() => {
   		this.trigger(true)
   	})
   	.catch(this.showError)
   },
 
-  showError(err) {
+  showError (err) {
   	AlertAction.alertError(`There was a problem. ${err}`)
   }
 })

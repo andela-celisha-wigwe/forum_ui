@@ -2,6 +2,10 @@
 
 import Reflux from 'reflux'
 
-export default Reflux.createAction([
-  'postRequest'
+export default Reflux.createActions([
+  'listPosts',
+  'viewPost',
+  'createPost',
+  'updatePost',
+  'deletePost'
 ])

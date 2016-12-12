@@ -4,14 +4,14 @@ import React from 'react'
 import Header from './components/Header'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import Footer from './components/Footer'
-import Message from './components/Message'
+import Alert from './components/Alert'
 
 export class App extends React.Component {
   render () {
     return (
       <MuiThemeProvider>
         <Header />
-        <Message />
+        <Alert />
         { this.renderChildren() }
         <Footer />
       </MuiThemeProvider>

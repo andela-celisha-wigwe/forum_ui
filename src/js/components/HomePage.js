@@ -6,23 +6,37 @@ import SubforumStore from '../stores/subforum_store'
 import SubforumAction from '../actions/subforum_action'
 
 export default class HomePage extends React.Component {
-	constructor (props) {
-		super(props)
-		
-	}
+  constructor (props) {
+    super(props)
+    this.state = {
+      subforums: []
+    }
 
-	componentDidMount () {
-		this.unsubscribe = SubforumStore.listen(this.onSubforums)
-		SubforumAction.listSubforums()
-	}
+    // this.setState({
+    //   subforums: []
+    // })
+  }
 
-	componentWillUnmount () {
-		this.unsubscribe()
-	}
+  componentDidMount () {
+    // this.setState({
+    //   subforums: []
+    // })
+    this.unsubscribe = SubforumStore.listen(this.onSubforums)
+    SubforumAction.listSubforums()
+  }
 
-	onSubforums(subforums) {
-		this.setState({
-			subforums
-		})
-	}
+  componentWillUnmount () {
+    this.unsubscribe()
+  }
+
+  onSubforums (subforums) {
+    this.setState({
+      subforums
+    })
+  }
+
+  render () {
+    console.log(this.state, this)
+    return (<div>{ JSON.stringify(this.state.subforums )}</div>)
+  }
 }

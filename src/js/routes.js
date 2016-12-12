@@ -15,11 +15,6 @@ export default (
   <Router history={browserHistory}>
     <Route path='/' component={App}>
       <IndexRoute component={HomePage} />
-
-      <Route path='/subforum/:subforum' component={SubforumPage} />
-      <Route path='/subforum/:subforum/post/:post' component={PostPage} />
-
-      <Route path='*' component={NoMatch} />
     </Route>
   </Router>
 )

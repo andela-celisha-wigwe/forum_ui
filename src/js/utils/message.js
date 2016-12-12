@@ -6,10 +6,10 @@ export default {
   all (post) {
     return API.get(`/posts/${post}/messages`)
   },
-  one (post, id) {
+  view (post, id) {
     return API.get(`/posts/${post}/messages/${id}`)
   },
-  edit (post, id, messageUpdate) {
+  update (post, id, messageUpdate) {
     return API.put(`/posts/${post}/messages/${id}`, messageUpdate)
   },
   del (post, id) {

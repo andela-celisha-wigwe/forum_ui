@@ -26,6 +26,7 @@ exports.default = {
   },
   wrapCall: function wrapCall(req) {
     return new Promise(function (resolve, reject) {
+      console.log(req.withCredentials(), "request");
       req.withCredentials().end(function (err, res) {
         if (res.statusCode >= 400 || err) {
           return reject(Object.assign(res, { err: err }));
