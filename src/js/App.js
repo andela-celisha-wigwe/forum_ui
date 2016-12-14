@@ -6,14 +6,27 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import Footer from './components/Footer'
 import Alert from './components/Alert'
 
-export class App extends React.Component {
+export default class extends React.Component {
+  constructor(props) {
+    super(props)
+  }
+
+	/**
+   * Render current page
+   */
+  renderChildren() {
+    return React.cloneElement(this.props.children, {});
+  }
+
   render () {
     return (
       <MuiThemeProvider>
-        <Header />
-        <Alert />
-        { this.renderChildren() }
-        <Footer />
+				<div>
+	        <Header />
+  	      <Alert />
+    	    {this.renderChildren()}
+      	  <Footer />
+				</div>
       </MuiThemeProvider>
     )
   }

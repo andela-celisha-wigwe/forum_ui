@@ -1,7 +1,7 @@
 import request from 'superagent'
 
 export default {
-  root: 'localhost:3000',
+  root: 'http://localhost:3000',
   get (path) {
     return this.wrapCall(request.get(this.root + path))
   },
@@ -17,7 +17,6 @@ export default {
   wrapCall (req) {
     return new Promise((resolve, reject) => {
       req
-        .withCredentials()
         .end((err, res) => {
           if (res.statusCode >= 400 || err) {
             return reject(Object.assign(res, { err }))

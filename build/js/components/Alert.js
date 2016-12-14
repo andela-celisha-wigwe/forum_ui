@@ -84,7 +84,7 @@ var Alert = exports.Alert = function (_React$Component) {
       // const hideClass = this.state.show ? '' : 'hide'
       return _react2.default.createElement(_Snackbar2.default, {
         open: this.state.show,
-        alert: this.state.text,
+        message: this.state.text,
         autoHideDuration: 4000,
         onRequestClose: this.handleRequestClose
       });

@@ -11,7 +11,7 @@
     "dist": "./node_modules/.bin/webpack -d",
     "wds": "./node_modules/.bin/webpack-dev-server --content-base dist --hot --inline",
     "compile": "npm run build && npm run dist",
-    "watch": "nodemon --exec 'npm run compile'"
+    "watch": "nodemon --ignore build/ --ignore dist/ --exec 'npm run compile'"
   },
   "author": "",
   "license": "ISC",

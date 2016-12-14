@@ -50,7 +50,7 @@
 
 	__webpack_require__(/*! webpack-dev-server/client?http://localhost:8080 */"../node_modules/webpack-dev-server/client/index.js?http:/localhost:8080");
 	__webpack_require__(/*! webpack/hot/only-dev-server */"../node_modules/webpack/hot/only-dev-server.js");
-	module.exports = __webpack_require__(/*! /Users/elchroy/Roy/Code/ror/roy_forums_ui/build/js/index.js */"./js/index.js");
+	module.exports = __webpack_require__(/*! /home/agustin/work/codementor/roy/forum_ui/build/js/index.js */"./js/index.js");
 
 
 /***/ },
@@ -30105,7 +30105,9 @@
 	  _react2.default.createElement(
 	    _reactRouter.Route,
 	    { path: '/', component: _App2.default },
-	    _react2.default.createElement(_reactRouter.IndexRoute, { component: _HomePage2.default })
+	    _react2.default.createElement(_reactRouter.IndexRoute, { component: _HomePage2.default }),
+	    _react2.default.createElement(_reactRouter.Route, { path: '', component: _HomePage2.default }),
+	    _react2.default.createElement(_reactRouter.Route, { path: '/', component: _HomePage2.default })
 	  )
 	);
 
@@ -35243,7 +35245,6 @@
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
-	exports.App = undefined;
 	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
@@ -35275,31 +35276,47 @@
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
-	var App = exports.App = function (_React$Component) {
-	  _inherits(App, _React$Component);
+	var _class = function (_React$Component) {
+	  _inherits(_class, _React$Component);
 	
-	  function App() {
-	    _classCallCheck(this, App);
+	  function _class(props) {
+	    _classCallCheck(this, _class);
 	
-	    return _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).apply(this, arguments));
+	    return _possibleConstructorReturn(this, (_class.__proto__ || Object.getPrototypeOf(_class)).call(this, props));
 	  }
 	
-	  _createClass(App, [{
+	  /**
+	    * Render current page
+	    */
+	
+	
+	  _createClass(_class, [{
+	    key: 'renderChildren',
+	    value: function renderChildren() {
+	      return _react2.default.cloneElement(this.props.children, {});
+	    }
+	  }, {
 	    key: 'render',
 	    value: function render() {
 	      return _react2.default.createElement(
 	        _MuiThemeProvider2.default,
 	        null,
-	        _react2.default.createElement(_Header2.default, null),
-	        _react2.default.createElement(_Alert2.default, null),
-	        this.renderChildren(),
-	        _react2.default.createElement(_Footer2.default, null)
+	        _react2.default.createElement(
+	          'div',
+	          null,
+	          _react2.default.createElement(_Header2.default, null),
+	          _react2.default.createElement(_Alert2.default, null),
+	          this.renderChildren(),
+	          _react2.default.createElement(_Footer2.default, null)
+	        )
 	      );
 	    }
 	  }]);
 	
-	  return App;
+	  return _class;
 	}(_react2.default.Component);
+	
+	exports.default = _class;
 
 /***/ },
 
@@ -35314,7 +35331,6 @@
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
-	exports.Header = undefined;
 	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
@@ -35334,7 +35350,7 @@
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
-	var Header = exports.Header = function (_React$Component) {
+	var Header = function (_React$Component) {
 	  _inherits(Header, _React$Component);
 	
 	  function Header() {
@@ -35360,6 +35376,8 @@
 	
 	  return Header;
 	}(_react2.default.Component);
+	
+	exports.default = Header;
 
 /***/ },
 
@@ -43613,7 +43631,6 @@
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
-	exports.Footer = undefined;
 	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
@@ -43629,7 +43646,7 @@
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
-	var Footer = exports.Footer = function (_React$Component) {
+	var Footer = function (_React$Component) {
 	  _inherits(Footer, _React$Component);
 	
 	  function Footer() {
@@ -43651,6 +43668,8 @@
 	
 	  return Footer;
 	}(_react2.default.Component);
+	
+	exports.default = Footer;
 
 /***/ },
 
@@ -43746,7 +43765,7 @@
 	      // const hideClass = this.state.show ? '' : 'hide'
 	      return _react2.default.createElement(_Snackbar2.default, {
 	        open: this.state.show,
-	        alert: this.state.text,
+	        message: this.state.text,
 	        autoHideDuration: 4000,
 	        onRequestClose: this.handleRequestClose
 	      });
@@ -43882,7 +43901,7 @@
 	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 	
 	var version = {
-	    "reflux-core": "0.4.2"
+	    "reflux-core": "0.4.3"
 	};
 	
 	var joinTrailing = (0, _joins.staticJoinCreator)("last");
@@ -45575,8 +45594,8 @@
 				// for each store in this.stores...
 				for (var i = 0, ii = this.stores.length; i < ii; i++) {
 					var str = this.stores[i];
-					// if it has the .isES6Store property then we know it's a class getting passed, not an instance
-					if (str.isES6Store) {
+					// if's a function then we know it's a class getting passed, not an instance
+					if (typeof str === 'function') {
 						var storeId = str.id;
 						// if there is NOT a .singleton property on the store then this store has not been initialized yet, so do so
 						if (!str.singleton) {
@@ -45649,7 +45668,7 @@
 		proto.mapStoreToState = function(store, filterFunc)
 		{
 			// make sure we have a proper singleton instance to work with
-			if (store.isES6Store) {
+			if (typeof store === 'function') {
 				if (store.singleton) {
 					store = store.singleton;
 				} else {
@@ -45786,6 +45805,7 @@
 		};
 		
 		// this is a static property so that other code can identify that this is a Reflux.Store class
+		// has issues specifically when using babel to transpile your ES6 stores for IE10 and below, not documented and shouldn't use yet
 		Object.defineProperty(RefluxStore, "isES6Store", {
 			get: function () {
 				return true;
@@ -51227,6 +51247,7 @@
 	    _this.state = {
 	      subforums: []
 	    };
+	    _this.onSubforums = _this.onSubforums.bind(_this);
 	
 	    // this.setState({
 	    //   subforums: []
@@ -51258,7 +51279,6 @@
 	  }, {
 	    key: 'render',
 	    value: function render() {
-	      console.log(this.state, this);
 	      return _react2.default.createElement(
 	        'div',
 	        null,
@@ -51414,7 +51434,7 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	exports.default = {
-	  root: 'localhost:3000',
+	  root: 'http://localhost:3000',
 	  get: function get(path) {
 	    return this.wrapCall(_superagent2.default.get(this.root + path));
 	  },
@@ -51429,8 +51449,7 @@
 	  },
 	  wrapCall: function wrapCall(req) {
 	    return new Promise(function (resolve, reject) {
-	      console.log(req.withCredentials(), "request");
-	      req.withCredentials().end(function (err, res) {
+	      req.end(function (err, res) {
 	        if (res.statusCode >= 400 || err) {
 	          return reject(Object.assign(res, { err: err }));
 	        }

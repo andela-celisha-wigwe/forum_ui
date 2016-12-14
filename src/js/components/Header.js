@@ -3,7 +3,7 @@
 import React from 'react'
 import SubHeader from 'material-ui/Subheader'
 
-export class Header extends React.Component {
+export default class Header extends React.Component {
   render () {
     return (
       <SubHeader>
