@@ -11,6 +11,7 @@ export default class HomePage extends React.Component {
     this.state = {
       subforums: []
     }
+		this.onSubforums = this.onSubforums.bind(this)
 
     // this.setState({
     //   subforums: []
@@ -36,7 +37,6 @@ export default class HomePage extends React.Component {
   }
 
   render () {
-    console.log(this.state, this)
     return (<div>{ JSON.stringify(this.state.subforums )}</div>)
   }
 }

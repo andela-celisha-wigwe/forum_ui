@@ -11,7 +11,7 @@ var _superagent2 = _interopRequireDefault(_superagent);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.default = {
-  root: 'localhost:3000',
+  root: 'http://localhost:3000',
   get: function get(path) {
     return this.wrapCall(_superagent2.default.get(this.root + path));
   },
@@ -26,8 +26,7 @@ exports.default = {
   },
   wrapCall: function wrapCall(req) {
     return new Promise(function (resolve, reject) {
-      console.log(req.withCredentials(), "request");
-      req.withCredentials().end(function (err, res) {
+      req.end(function (err, res) {
         if (res.statusCode >= 400 || err) {
           return reject(Object.assign(res, { err: err }));
         }

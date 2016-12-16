@@ -13,8 +13,10 @@ import NoMatch from './components/NoMatch'
 export default (
   // Write the routes
   <Router history={browserHistory}>
-    <Route path='/' component={App}>
+    <Route path="/" component={App}>
       <IndexRoute component={HomePage} />
+      <Route path="" component={HomePage} />
+      <Route path="/" component={HomePage} />
     </Route>
   </Router>
 )

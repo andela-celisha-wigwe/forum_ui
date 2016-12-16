@@ -37,6 +37,7 @@ var HomePage = function (_React$Component) {
     _this.state = {
       subforums: []
     };
+    _this.onSubforums = _this.onSubforums.bind(_this);
 
     // this.setState({
     //   subforums: []
@@ -68,7 +69,6 @@ var HomePage = function (_React$Component) {
   }, {
     key: 'render',
     value: function render() {
-      console.log(this.state, this);
       return _react2.default.createElement(
         'div',
         null,
