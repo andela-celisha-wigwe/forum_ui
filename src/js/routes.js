@@ -15,8 +15,9 @@ export default (
   <Router history={browserHistory}>
     <Route path="/" component={App}>
       <IndexRoute component={HomePage} />
-      <Route path="" component={HomePage} />
       <Route path="/" component={HomePage} />
+      <Route path="subforums/:id" component={SubforumPage} />
+      <Route path="posts/:id" component={PostPage} />
     </Route>
   </Router>
 )

@@ -15,3 +15,15 @@ fixed top menu
 - 
 
 curl -H "Origin: http://example.com" --verbose http://localhost:3000/subforums
+
+- inspect the propertes the components being received and use the correct one.
+- allow cors in the specific url
+
+- create a testa folder
+- write tests usign examles on the webpage
+- load the webpage
+- wait to have 15 forums
+- finish
+- run test - modifying e2e test command
+	-e2e-test  "&& nightwatch"
+	sleep in bash

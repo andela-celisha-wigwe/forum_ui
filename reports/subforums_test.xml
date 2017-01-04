@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="1"
+            failures="0"
+            tests="1">
+
+  <testsuite name="subforums_test"
+    errors="1" failures="0" hostname="" id="" package="subforums_test" skipped="0"
+    tests="1" time="0.008000" timestamp="Tue, 03 Jan 2017 11:39:25 GMT">
+  
+    <testcase name="SubforumTest" time="0.008000" assertions="0">
+    </testcase>
+      <system-err>
+          Error while running [Subforums Test / SubforumTest]:
+
+  TypeError: client.url(...).waitForElement is not a function
+    at Object.module.exports.SubforumTest (/Users/elchroy/Roy/Code/code_ruby/roy_forums_ui/tests/subforums_test.js:5:4)
+    at Module.call (/Users/elchroy/Roy/Code/code_ruby/roy_forums_ui/node_modules/nightwatch/lib/runner/module.js:62:34)
+    at /Users/elchroy/Roy/Code/code_ruby/roy_forums_ui/node_modules/nightwatch/lib/runner/testcase.js:70:29
+    at _fulfilled (/Users/elchroy/Roy/Code/code_ruby/roy_forums_ui/node_modules/q/q.js:834:54)
+    at self.promiseDispatch.done (/Users/elchroy/Roy/Code/code_ruby/roy_forums_ui/node_modules/q/q.js:863:30)
+    at Promise.promise.promiseDispatch (/Users/elchroy/Roy/Code/code_ruby/roy_forums_ui/node_modules/q/q.js:796:13)
+    at /Users/elchroy/Roy/Code/code_ruby/roy_forums_ui/node_modules/q/q.js:556:49
+    at runSingle (/Users/elchroy/Roy/Code/code_ruby/roy_forums_ui/node_modules/q/q.js:137:13)
+    at flush (/Users/elchroy/Roy/Code/code_ruby/roy_forums_ui/node_modules/q/q.js:125:13)
+    at _combinedTickCallback (internal/process/next_tick.js:67:7)
+      </system-err>
+  
+  
+  </testsuite>
+</testsuites>

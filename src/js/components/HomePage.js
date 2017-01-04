@@ -4,6 +4,7 @@ import React from 'react'
 
 import SubforumStore from '../stores/subforum_store'
 import SubforumAction from '../actions/subforum_action'
+import SubforumCard from './SubforumCard'
 
 export default class HomePage extends React.Component {
   constructor (props) {
@@ -19,9 +20,6 @@ export default class HomePage extends React.Component {
   }
 
   componentDidMount () {
-    // this.setState({
-    //   subforums: []
-    // })
     this.unsubscribe = SubforumStore.listen(this.onSubforums)
     SubforumAction.listSubforums()
   }
@@ -37,6 +35,11 @@ export default class HomePage extends React.Component {
   }
 
   render () {
-    return (<div>{ JSON.stringify(this.state.subforums )}</div>)
+    const subforumList = this.state.subforums.map((subforum) => 
+      (<SubforumCard name={subforum.name} key={subforum.id} description={subforum.description} id={subforum._id["$oid"]} />)
+    )
+    return (
+      <div>{ subforumList }</div>
+    )
   }
 }

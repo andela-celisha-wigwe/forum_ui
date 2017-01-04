@@ -21,12 +21,13 @@ module.exports = {
     filename: 'bundle.js',
     // the output bundle
     path: resolve(__dirname, 'dist'),
-    // publicPath: '/'
+    publicPath: '/'
     // necessary for HMR to know where to load the hot update chunks
   },
   context: APP_DIR,
   devtool: 'inline-source-map',
   devServer: {
+    historyApiFallback: true,
     hot: true,
     // activate hot reloading
 
@@ -56,7 +57,8 @@ module.exports = {
     // prints more readable module names in the browser console on HMR updates
     new HTMLWebpackPlugin({
       template: __dirname + "/src/index.html",
-      filename: __dirname + "/dist/index.html"
+      filename: "index.html",
+      inject: "body"
     })
   ],
 }
