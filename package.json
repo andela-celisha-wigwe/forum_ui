@@ -4,15 +4,17 @@
   "description": "just a ui for the rails project",
   "main": "index.js",
   "scripts": {
-    "build": "./node_modules/babel-cli/bin/babel.js --plugins transform-react-jsx src -w --out-dir build",
+    "build": "mkdir -p build && ./node_modules/babel-cli/bin/babel.js --plugins transform-react-jsx src --out-dir build",
+    "build-watch": "mkdir -p build && ./node_modules/babel-cli/bin/babel.js --plugins transform-react-jsx src -w --out-dir build",
     "test": "./node_modules/mocha/bin/mocha --require babel-core/register -R spec",
     "start": "node build/js/index.js",
     "eslint": "./node_modules/standard/bin/cmd.js 'src/**/*.js'",
-    "dist": "./node_modules/.bin/webpack -d -w",
+    "dist": "mkdir -p dist && ./node_modules/.bin/webpack -d",
+    "dist-watch": "mkdir -p dist && ./node_modules/.bin/webpack -d -w",
     "wds": "./node_modules/.bin/webpack-dev-server --content-base dist --hot --inline",
     "compile": "npm run build && npm run dist",
     "watch": "nodemon --ignore build/ --ignore dist/ --exec 'npm run compile'",
-    "e2e-test": "./ete.sh"
+    "ete": "./ete.sh"
   },
   "author": "",
   "license": "ISC",
@@ -29,7 +31,7 @@
     "mocha": "^3.2.0",
     "nightwatch": "^0.9.11",
     "react-hot-loader": "^1.3.1",
-    "selenium-server": "^3.0.1",
+    "selenium-download": "^2.0.9",
     "standard": "^8.6.0",
     "webpack": "^1.14.0",
     "webpack-dev-server": "^1.16.2"

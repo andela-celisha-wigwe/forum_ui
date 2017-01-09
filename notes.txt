@@ -27,3 +27,9 @@ curl -H "Origin: http://example.com" --verbose http://localhost:3000/subforums
 - run test - modifying e2e test command
 	-e2e-test  "&& nightwatch"
 	sleep in bash
+
+
+	- what the properties that we are recieving 
+	- 2 pobbielb
+	- 	button color does not accept the rgba format
+		background color using background altoghter.

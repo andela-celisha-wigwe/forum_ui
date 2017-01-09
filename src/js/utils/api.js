@@ -16,13 +16,13 @@ export default {
   },
   wrapCall (req) {
     return new Promise((resolve, reject) => {
-      req
-        .end((err, res) => {
-          if (res.statusCode >= 400 || err) {
-            return reject(Object.assign(res, { err }))
-          }
-          resolve(res.body)
-        })
+      req.end((err, res) => {
+        if (err || res.statusCode >= 400) {
+          console.log(err)
+          return reject(Object.assign(res || {}, { err }))
+        }
+        resolve(res.body)
+      })
     })
   }
 }

@@ -15,7 +15,12 @@ const myTheme = getMuiTheme({
     primary2Color: '#ffffff',
     primary3Color: '#333333',
     accent1Color: '#4dcadd',
-    disabledColor: '#f2f2f2'
+    disabledColor: '#f2f2f2',
+    button: {
+      backgroundColor: 'rgb(136, 169, 208)',
+      color: '#ffffff',
+      margin: '0 10px'
+    }
   },
   fontFamily: 'Roboto'
   // spacing: '' // spacing between elements

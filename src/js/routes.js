@@ -8,6 +8,8 @@ import App from './App'
 import HomePage from './components/HomePage'
 import SubforumPage from './components/SubforumPage'
 import PostPage from './components/PostPage'
+import UserLoginPage from './components/UserLoginPage'
+import UserRegistrationPage from './components/UserRegistrationPage'
 import NoMatch from './components/NoMatch'
 
 export default (
@@ -18,6 +20,8 @@ export default (
       <Route path="/" component={HomePage} />
       <Route path="subforums/:id" component={SubforumPage} />
       <Route path="posts/:id" component={PostPage} />
+      <Route path="/login" component={UserLoginPage} />
+      <Route path="/register" component={UserRegistrationPage} />
     </Route>
   </Router>
 )

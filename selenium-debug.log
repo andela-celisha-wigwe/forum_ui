@@ -1,0 +1,35 @@
+21:21:55.276 INFO - Selenium build info: version: '3.0.1', revision: '1969d75'
+21:21:55.277 INFO - Launching a standalone Selenium Server
+2017-01-07 21:21:55.304:INFO::main: Logging initialized @264ms
+21:21:55.368 INFO - Driver provider org.openqa.selenium.ie.InternetExplorerDriver registration is skipped:
+ registration capabilities Capabilities [{ensureCleanSession=true, browserName=internet explorer, version=, platform=WINDOWS}] does not match the current platform MAC
+21:21:55.368 INFO - Driver provider org.openqa.selenium.edge.EdgeDriver registration is skipped:
+ registration capabilities Capabilities [{browserName=MicrosoftEdge, version=, platform=WINDOWS}] does not match the current platform MAC
+21:21:55.369 INFO - Driver class not found: com.opera.core.systems.OperaDriver
+21:21:55.369 INFO - Driver provider com.opera.core.systems.OperaDriver registration is skipped:
+Unable to create new instances on this machine.
+21:21:55.369 INFO - Driver class not found: com.opera.core.systems.OperaDriver
+21:21:55.369 INFO - Driver provider com.opera.core.systems.OperaDriver is not registered
+2017-01-07 21:21:55.423:INFO:osjs.Server:main: jetty-9.2.15.v20160210
+2017-01-07 21:21:55.452:INFO:osjsh.ContextHandler:main: Started o.s.j.s.ServletContextHandler@4520ebad{/,null,AVAILABLE}
+2017-01-07 21:21:55.482:INFO:osjs.ServerConnector:main: Started ServerConnector@2b98378d{HTTP/1.1}{0.0.0.0:4444}
+2017-01-07 21:21:55.483:INFO:osjs.Server:main: Started @443ms
+21:21:55.483 INFO - Selenium Server is up and running
+21:21:55.722 INFO - SessionCleaner initialized with insideBrowserTimeout 0 and clientGoneTimeout 1800000 polling every 180000
+21:21:55.753 INFO - Executing: [new session: Capabilities [{acceptSslCerts=true, marionette=true, name=Subforums Test, browserName=chrome, javascriptEnabled=true, platform=ANY}]])
+21:21:55.767 INFO - Creating a new session for Capabilities [{acceptSslCerts=true, marionette=true, name=Subforums Test, browserName=chrome, javascriptEnabled=true, platform=ANY}]
+Starting ChromeDriver 2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9) on port 1305
+Only local connections are allowed.
+21:21:56.078 INFO - Attempting bi-dialect session, assuming Postel's Law holds true on the remote end
+21:21:56.706 INFO - Detected dialect: OSS
+21:21:56.727 INFO - Done: [new session: Capabilities [{acceptSslCerts=true, marionette=true, name=Subforums Test, browserName=chrome, javascriptEnabled=true, platform=ANY}]]
+21:21:56.746 INFO - Executing: [get: http://localhost:8080])
+21:21:57.389 INFO - Done: [get: http://localhost:8080]
+21:21:57.403 INFO - Executing: [find elements: By.cssSelector: body])
+21:21:57.604 INFO - Done: [find elements: By.cssSelector: body]
+21:21:57.617 INFO - Executing: [is displayed: 0 [[ChromeDriver: chrome on MAC (d34b6a792130bb67483a3e571ffd9cd7)] -> css selector: body]])
+21:21:57.647 INFO - Done: [is displayed: 0 [[ChromeDriver: chrome on MAC (d34b6a792130bb67483a3e571ffd9cd7)] -> css selector: body]]
+21:21:57.655 INFO - Executing: [get title])
+21:21:57.662 INFO - Done: [get title]
+21:21:57.674 INFO - Executing: [delete session: 432be8a7-77f4-4c84-a09f-7db7ec4fe9a2])
+21:21:57.754 INFO - Done: [delete session: 432be8a7-77f4-4c84-a09f-7db7ec4fe9a2]
