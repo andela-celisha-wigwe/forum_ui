@@ -39,7 +39,7 @@ export default class HomePage extends React.Component {
       (<SubforumCard name={subforum.name} key={subforum.id} description={subforum.description} id={subforum._id["$oid"]} />)
     )
     return (
-      <div>{ subforumList }</div>
+      <div className="subforum-cards-container">{ subforumList }</div>
     )
   }
 }

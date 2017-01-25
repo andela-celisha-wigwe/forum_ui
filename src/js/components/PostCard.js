@@ -17,17 +17,17 @@ export default class extends React.Component {
 
   render () {
     return (
-      <Card>
-        <CardHeader
-          title={this.props.title}
-        />
-        <CardText>
-          {this.props.body}
-        </CardText>
-        <CardActions>
-          <FlatButton label="View" onClick={this.showPost} />
-        </CardActions>
-      </Card>
+      <div className="post-card" >
+        <Card>
+          <CardHeader title={this.props.title} className="post-header" />
+          <CardText className="post-body">
+            {this.props.body}
+            <CardActions className="actions-bar">
+              <FlatButton label="follow" onClick={this.showPost} />
+            </CardActions>
+          </CardText>
+        </Card>
+      </div>
     );
   }
 }

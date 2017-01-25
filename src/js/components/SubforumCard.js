@@ -15,17 +15,18 @@ export default class extends React.Component {
 
   render () {
     return (
-      <Card>
-        <CardHeader
-          title={this.props.name}
-        />
-        <CardText>
-          {this.props.description}
-        </CardText>
-        <CardActions>
-          <FlatButton label="View" onClick={this.showSubforum} />
-        </CardActions>
-      </Card>
+      <div className="subforum-card" onClick={this.showSubforum}>
+        <Card>
+          <div className="subforum-header">
+            <CardHeader title={this.props.name}/>
+          </div>
+          <div className="subforum-body">
+            <CardText>
+              {this.props.description}
+            </CardText>
+          </div>
+        </Card>
+      </div>
     );
   }
 }

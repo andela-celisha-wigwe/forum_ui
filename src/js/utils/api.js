@@ -1,22 +1,39 @@
 import request from 'superagent'
 
 export default {
-  root: 'http://localhost:3000',
+  root: 'http://172.16.23.27:3000',
+  // root: 'http://localhost:3000',
   get (path) {
     return this.wrapCall(request.get(this.root + path))
   },
   post (path, data) {
-    return this.wrapCall(request.post(this.root + path, data))
+    const headers = window.localStorage.getItem('currentUser')
+    ? { Authorization: `Token ${JSON.parse(window.localStorage.getItem('currentUser')).auth_token}` }
+    : {}
+    return this.wrapCall(request.post(this.root + path, data), headers)
   },
   del (path) {
-    return this.wrapCall(request.del(this.root + path))
+    const headers = window.localStorage.getItem('currentUser')
+    ? { Authorization: `Token ${JSON.parse(window.localStorage.getItem('currentUser')).auth_token}` }
+    : {}
+    return this.wrapCall(request.del(this.root + path), headers)
   },
   put (path, data) {
-    return this.wrapCall(request.put(this.root + path, data))
+    const headers = window.localStorage.getItem('currentUser')
+    ? { Authorization: `Token ${JSON.parse(window.localStorage.getItem('currentUser')).auth_token}` }
+    : {}
+    return this.wrapCall(request.put(this.root + path, data), headers)
   },
-  wrapCall (req) {
+  wrapCall (req, headers = {}) {
     return new Promise((resolve, reject) => {
-      req.end((err, res) => {
+      if (headers != {}) {
+        Object.keys(headers).forEach((key) => {
+          req.set(key, headers[key])
+        })
+      }
+      req
+      .withCredentials(true)
+      .end((err, res) => {
         if (err || res.statusCode >= 400) {
           console.log(err)
           return reject(Object.assign(res || {}, { err }))

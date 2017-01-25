@@ -16,7 +16,7 @@ export class Alert extends React.Component {
 
     this.state = {
       text: '',
-      show: false
+      show: false // change to false
     }
   }
 
@@ -49,8 +49,10 @@ export class Alert extends React.Component {
     return (
       <Snackbar
         open={this.state.show}
+        style={{ bottom: "auto", backgroundColor: "red" }}
+        bodyStyle={{ backgroundColor: "red" }}
         message={this.state.text}
-        autoHideDuration={4000}
+        autoHideDuration={60000}
         onRequestClose={this.handleRequestClose}
         />
     )

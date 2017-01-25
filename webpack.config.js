@@ -38,16 +38,17 @@ module.exports = {
     // match the output `publicPath`
   },
   module: {
-    /*loaders: [
+    loaders: [
       {
-        test: /\.js$/,
+        test: /\.scss$/,
         loaders: [
-          'babel-loader',
-          'react-hot'
+          'style-loader',
+          'css-loader',
+          'sass-loader'
         ],
         exclude: /node_modules/
       }
-    ],*/
+    ],
   },
 
   plugins: [

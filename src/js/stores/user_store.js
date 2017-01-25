@@ -47,8 +47,9 @@ export default Reflux.createStore({
 	},
 
 	showError (err) {
-		console.log(err)
-		AlertAction.alertError(err.error)
+		console.log(err, err.toString())
+		const errorMessages = JSON.parse(err.text).join("\n")
+		AlertAction.alertError(errorMessages)
 	}
 })
 

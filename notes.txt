@@ -33,3 +33,13 @@ curl -H "Origin: http://example.com" --verbose http://localhost:3000/subforums
 	- 2 pobbielb
 	- 	button color does not accept the rgba format
 		background color using background altoghter.
+
+
+
+Use SASS to
+	one file for all the colors
+	another file for sizes
+
+	avoid reloading the page (even when clicking on home)
+	style the home page and other pages.
+

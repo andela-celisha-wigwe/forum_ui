@@ -42,9 +42,13 @@ export default class extends React.Component {
     return (
       <MuiThemeProvider muiTheme={myTheme}>
 				<div>
-	        <Header />
+          <div className="main-header">
+            <Header />
+          </div>
   	      <Alert />
-    	    {this.renderChildren()}
+          <div className="main-body">
+            {this.renderChildren()}
+          </div>
       	  <Footer />
 				</div>
       </MuiThemeProvider>

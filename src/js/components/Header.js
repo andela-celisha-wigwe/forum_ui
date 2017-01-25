@@ -4,6 +4,8 @@ import React from 'react'
 import { Link } from 'react-router'
 import AppBar from 'material-ui/AppBar'
 import FlatButton from 'material-ui/FlatButton'
+import injectTapEventPlugin from 'react-tap-event-plugin';
+injectTapEventPlugin();
 
 import UserStore from '../stores/user_store'
 import UserAction from '../actions/user_action'
@@ -20,6 +22,7 @@ export default class Header extends React.Component {
 
 		this.onShowLogout = this.onShowLogout.bind(this)
 		this.onAuthUser = this.onAuthUser.bind(this)
+		this.goHomePage = this.goHomePage.bind(this)
 		
 	}
 
@@ -42,6 +45,11 @@ export default class Header extends React.Component {
 		this.setState({
 			showLogout: !this.state.showLogout
 		})
+	}
+
+	goHomePage () {
+		console.log('onTouchTap triggered on the title component')
+		window.location.href = "/"
 	}
 
 	handleLogout () {
@@ -68,10 +76,11 @@ export default class Header extends React.Component {
 			</p>
 		)
 		return (
-			<AppBar
-			title="Home"
-    		iconElementRight={ right }
-			/>
+				<AppBar
+				title="Home"
+				onTitleTouchTap={ this.goHomePage }
+	    		iconElementRight={ right }
+				/>
 		)
 	}
 

@@ -1,6 +1,7 @@
 'use strict'
 
 import React from 'react'
+import TextField from 'material-ui/TextField'
 
 import AlertAction from '../actions/alert_action'
 import ButtonComponent from './Button'
@@ -12,26 +13,12 @@ export default class extends React.Component {
 		super(props);
 
 		this.state = {
-			username: 'mmmmmmmm',
-			password: 'pppppppp',
+			// username: '',
+			// password: '',
 			error: false
 		}
 		this.handleLogin = this.handleLogin.bind(this)
 		this.loginDataIsValid = this.loginDataIsValid.bind(this)
-		this.setUsername = this.setUsername.bind(this)
-		this.setPassword = this.setPassword.bind(this)
-	}
-
-	setUsername () {
-		this.setState({
-			username: this.refs.username.value.trim()
-		})
-	}
-
-	setPassword () {
-		this.setState({
-			password: this.refs.password.value.trim()
-		})
 	}
 
 	loginDataIsValid () {
@@ -39,26 +26,24 @@ export default class extends React.Component {
 	}
 
 	handleLogin () {
-		if (! this.loginDataIsValid()) {
-			this.setState({
-				error: true
-			})
-			AlertAction.alertError("there was an error")
-			return
-		}
 		this.setState({
 			error: false
 		})
-		const { username, password } = this.state
+
+		const username = this.refs.username.input.value.trim()
+		const password = this.refs.password.input.value.trim()
 		UserAction.userLogin({username, password})
 	}
 
 	render () {
 		return (
-			<div>
-				<input type="text" ref="username" value={this.state.username} name="username" placeholder="username" onChange={ this.setUsername } />
-				<input type="password" ref="password" value={this.state.password} name="password" placeholder="password" onChange={ this.setPassword } />
-				
+			<div className="loginForm">
+				<div className="inputField">
+					<TextField hintText="username" ref="username"  value={this.state.username} name="username" />
+				</div>
+				<div className="inputField">
+					<TextField type="password" hintText="password" ref="password"  value={this.state.password} name="password" />
+				</div>
 				<ButtonComponent label="Login" onClick={this.handleLogin} />
 			</div>
 		)
