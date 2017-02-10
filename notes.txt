@@ -4,6 +4,9 @@ http://www.material-ui.com/#/components/subheader
 http://www.material-ui.com/#/components/snackbar
 https://webpack.js.org/guides/hmr-react/
 
+https://facebook.github.io/react-native/docs/navigator.html
+http://stackoverflow.com/questions/30905769/change-view-in-navigator-in-react-native
+
 
 - buttons and links #4dcadd with #ffff content
 - background #ffffff
