@@ -11,7 +11,7 @@
     "eslint": "./node_modules/standard/bin/cmd.js 'src/**/*.js'",
     "dist": "mkdir -p dist && ./node_modules/.bin/webpack -d",
     "dist-watch": "mkdir -p dist && ./node_modules/.bin/webpack -d -w",
-    "wds": "./node_modules/.bin/webpack-dev-server --content-base dist --hot --inline",
+    "wds": "./node_modules/.bin/webpack-dev-server --content-base dist --hot --inline --port 9000",
     "compile": "npm run build && npm run dist",
     "watch": "nodemon --ignore build/ --ignore dist/ --exec 'npm run compile'",
     "ete": "./ete.sh"

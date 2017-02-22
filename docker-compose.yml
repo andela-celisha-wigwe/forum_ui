@@ -1,0 +1,14 @@
+version: '2'
+services:
+  # backend:
+  #   image: royforums_web
+  web:
+    build: .
+    image: roy_forums_ui
+    volumes:
+      - .:/myapp_ui
+    command: npm run wds
+    ports:
+      - "8080:8080"
+    # depends_on:
+    #   - backend
