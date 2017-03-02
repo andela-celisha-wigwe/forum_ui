@@ -3,12 +3,12 @@
 import React from 'react'
 import {Card, CardActions, CardHeader, CardText} from 'material-ui/Card'
 
-import SubforumStore from '../stores/subforum_store'
-import SubforumAction from '../actions/subforum_action'
+import SubforumStore from '../../shared/stores/subforum_store'
+import SubforumAction from '../../shared/actions/subforum_action'
 import SubforumCard from './SubforumCard'
 
-import PostAction from '../actions/post_action'
-import PostStore from '../stores/post_store'
+import PostAction from '../../shared/actions/post_action'
+import PostStore from '../../shared/stores/post_store'
 import PostCard from './PostCard'
 import NewPostForm from './NewPostForm'
 

@@ -46,3 +46,6 @@ Use SASS to
 	avoid reloading the page (even when clicking on home)
 	style the home page and other pages.
 
+- heroku
+- server side rendering
+- add types to the react code - typescript

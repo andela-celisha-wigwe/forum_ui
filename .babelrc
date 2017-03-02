@@ -4,6 +4,7 @@
 		"react"
 	],
 	"plugins": [
-		"transform-react-jsx"
+		"transform-react-jsx",
+		"transform-async-to-generator"
 	]
 }

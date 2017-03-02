@@ -7,8 +7,8 @@ import FlatButton from 'material-ui/FlatButton'
 import injectTapEventPlugin from 'react-tap-event-plugin';
 injectTapEventPlugin();
 
-import UserStore from '../stores/user_store'
-import UserAction from '../actions/user_action'
+import UserStore from '../../shared/stores/user_store'
+import UserAction from '../../shared/actions/user_action'
 import ButtonComponent from './Button'
 
 export default class Header extends React.Component {

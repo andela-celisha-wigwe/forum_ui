@@ -2,8 +2,7 @@
 
 import React from 'react'
 
-// import AlertAction from '../actions/alert_action'
-import AlertStore from '../stores/alert_store'
+import AlertStore from '../../shared/stores/alert_store'
 import Snackbar from 'material-ui/Snackbar'
 
 export class Alert extends React.Component {

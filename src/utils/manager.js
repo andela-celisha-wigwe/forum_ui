@@ -15,21 +15,26 @@ export default {
 		this.trigger(value)
 	},
 
-	handleLogout: () => {
+	handleLogout () {
 		this.setItem(this.key, "")
 		// window.localStorage.clear()
 		this.trigger(false)
 	},
 
-	checkLogin: () => {
-		return JSON.parse(this.getItem(this.key)) || false
+	checkLogin () {
+		try {
+			return JSON.parse(this.getItem(this.key))
+		} catch (err) {
+			console.log(err)
+			return false
+		}
 	},
 
-	setItem: (key, value) => {
+	setItem (key, value) {
 		window.localStorage.setItem(key, value)
 	},
 
-	getItem: (key) => {
+	getItem (key) {
 		window.localStorage.getItem(key)
 	},
 
@@ -41,9 +46,8 @@ export default {
 	// 	this.setItem(this.key, userJSON)
 	// },
 
-	showError: () => {
+	showError (err) {
 		console.log("there was a problem")
-		const errorMessages = JSON.parse(err.text).join("\n")
-		AlertAction.alertError(errorMessages)
+		AlertAction.alertError(err.toString())
 	}
 }

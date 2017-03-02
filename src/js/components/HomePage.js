@@ -2,8 +2,8 @@
 
 import React from 'react'
 
-import SubforumStore from '../stores/subforum_store'
-import SubforumAction from '../actions/subforum_action'
+import SubforumStore from '../../shared/stores/subforum_store'
+import SubforumAction from '../../shared/actions/subforum_action'
 import SubforumCard from './SubforumCard'
 
 export default class HomePage extends React.Component {

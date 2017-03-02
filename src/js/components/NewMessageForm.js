@@ -3,9 +3,8 @@
 import React from 'react'
 import TextField from 'material-ui/TextField'
 
-import AlertAction from '../actions/alert_action'
 import ButtonComponent from './Button'
-import MessageAction from '../actions/message_action'
+import MessageAction from '../../shared/actions/message_action'
 
 export default class extends React.Component {
 

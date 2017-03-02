@@ -3,13 +3,13 @@
 import React from 'react'
 import {Card, CardActions, CardHeader, CardText} from 'material-ui/Card'
 
-import MessageAction from '../actions/message_action'
-import MessageStore from '../stores/message_store'
+import MessageAction from '../../shared/actions/message_action'
+import MessageStore from '../../shared/stores/message_store'
 import MessageCard from './MessageCard'
 import NewMessageForm from './NewMessageForm'
 
-import PostStore from '../stores/post_store'
-import PostAction from '../actions/post_action'
+import PostStore from '../../shared/stores/post_store'
+import PostAction from '../../shared/actions/post_action'
 
 export default class extends React.Component {
 	constructor (props) {

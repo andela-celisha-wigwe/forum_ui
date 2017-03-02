@@ -1,9 +1,9 @@
 'use strict'
+import 'babel-polyfill'
 
 import React from 'react'
 import ReactDOM from 'react-dom'
 const css = require('../../src/sass/main.scss')
-console.log(css, "this is the css")
 
 import Routes from './routes'
 
