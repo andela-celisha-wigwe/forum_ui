@@ -7,11 +7,12 @@
     "build": "mkdir -p build && ./node_modules/babel-cli/bin/babel.js --plugins transform-react-jsx src --out-dir build",
     "build-watch": "mkdir -p build && ./node_modules/babel-cli/bin/babel.js --plugins transform-react-jsx src -w --out-dir build",
     "test": "./node_modules/mocha/bin/mocha --require babel-core/register -R spec",
-    "start": "node build/js/index.js",
     "eslint": "./node_modules/standard/bin/cmd.js 'src/**/*.js'",
     "dist": "mkdir -p dist && ./node_modules/.bin/webpack -d",
     "dist-watch": "mkdir -p dist && ./node_modules/.bin/webpack -d -w",
     "wds": "./node_modules/.bin/webpack-dev-server --content-base dist --hot --inline --port 9000 --host 0.0.0.0",
+    "wds-docker": "NODE_ENV=docker ./node_modules/.bin/webpack-dev-server --content-base dist --hot --inline --port 9000 --host 0.0.0.0",
+    "start": "npm run build && NODE_ENV=production webpack-dev-server --content-base dist --hot --inline --port 9000 --host 0.0.0.0",
     "compile": "npm run build && npm run dist",
     "watch": "nodemon --ignore build/ --ignore dist/ --exec 'npm run compile'",
     "ete": "./ete.sh"

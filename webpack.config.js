@@ -4,6 +4,10 @@ const webpack = require('webpack')
 
 const APP_DIR = resolve(__dirname, 'build')
 
+if (process.env["NODE_ENV"] === "production") {
+
+}
+
 module.exports = {
   entry: [
     //'react-hot-loader/patch',
@@ -67,6 +71,12 @@ module.exports = {
       template: __dirname + "/src/index.html",
       filename: "index.html",
       inject: "body"
+    }),
+    new webpack.DefinePlugin({
+      ENV: JSON.stringify(process.env["NODE_ENV"])
+      // watch out for webpack and compilation of node environment.
+      // Use definePlugin anytime I want to define something at compilation time,
+      // that would be available at execution time.
     })
   ],
 }

@@ -2,10 +2,14 @@
 	"development": {
 		"appUrl": "http://web:3000"
 	},
-
+	"docker": {
+		"appUrl": "http://web:4000"
+	},
 	"test": {
 		"appUrl": "http://192.168.2.1:3000"
 	},
 
-	"production": {}
+	"production": {
+		"appUrl": "https://royforums-core.herokuapp.com"
+	}
 }

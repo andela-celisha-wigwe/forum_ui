@@ -4,8 +4,6 @@ WORKDIR /myapp_ui
 ADD ./package.json /myapp_ui/package.json
 RUN npm install
 ADD ./src /myapp_ui/src
-ADD ./utils /myapp_ui/utils
-ADD ./shared /myapp_ui/shared
 ADD ./config.json /myapp_ui/config.json
 ADD ./webpack.config.js /myapp_ui/webpack.config.js
 ADD ./.babelrc /myapp_ui/.babelrc
