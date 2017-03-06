@@ -1,3 +1,4 @@
 [submodule "src/shared"]
 	path = src/shared
 	url = https://github.com/andela-celisha-wigwe/forum_shared.git
+	branch = master
