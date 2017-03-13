@@ -1,6 +1,6 @@
 {
 	"development": {
-		"appUrl": "http://web:3000"
+		"appUrl": "http://localhost:3000"
 	},
 	"docker": {
 		"appUrl": "http://web:4000"

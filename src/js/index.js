@@ -3,7 +3,6 @@ import 'babel-polyfill'
 
 import React from 'react'
 import ReactDOM from 'react-dom'
-const css = require('../../src/sass/main.scss')
 
 import Routes from './routes'
 

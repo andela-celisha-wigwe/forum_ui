@@ -50,3 +50,6 @@ Use SASS to
 - server side rendering
 - add types to the react code - typescript
 - we are usgin $PORT because heroku assigns a port randomly and we cannot predict which port will be used in heroku.
+
+
+- https://github.com/kriasoft/isomorphic-style-loader#react-component-example

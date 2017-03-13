@@ -4,7 +4,8 @@
   "description": "just a ui for the rails project",
   "main": "index.js",
   "scripts": {
-    "build": "mkdir -p build && ./node_modules/babel-cli/bin/babel.js --plugins transform-react-jsx src --out-dir build",
+    "build": "mkdir -p build/css && npm run build-sass && ./node_modules/babel-cli/bin/babel.js --plugins transform-react-jsx src --out-dir build",
+    "build-sass": "node-sass src/sass/main.scss dist/main.css",
     "build-watch": "mkdir -p build && ./node_modules/babel-cli/bin/babel.js --plugins transform-react-jsx src -w --out-dir build",
     "test": "./node_modules/mocha/bin/mocha --require babel-core/register -R spec",
     "eslint": "./node_modules/standard/bin/cmd.js 'src/**/*.js'",
@@ -12,7 +13,8 @@
     "dist-watch": "mkdir -p dist && ./node_modules/.bin/webpack -d -w",
     "wds": "./node_modules/.bin/webpack-dev-server --content-base dist --hot --inline --port 9000 --host 0.0.0.0",
     "wds-docker": "NODE_ENV=docker ./node_modules/.bin/webpack-dev-server --content-base dist --hot --inline --port 9000 --host 0.0.0.0",
-    "start": "npm run build && NODE_ENV=production webpack-dev-server --content-base dist --hot --inline --port $PORT --host 0.0.0.0",
+    "serve": "nodemon build/js/server.js",
+    "start": "npm run build && npm run dist && npm run serve",
     "compile": "npm run build && npm run dist",
     "watch": "nodemon --ignore build/ --ignore dist/ --exec 'npm run compile'",
     "ete": "./ete.sh"
@@ -50,6 +52,7 @@
     "webpack-dev-server": "^1.16.2"
   },
   "dependencies": {
+    "express": "^4.15.2",
     "material-ui": "^0.16.4",
     "moment": "^2.17.1",
     "react": "^15.4.1",
