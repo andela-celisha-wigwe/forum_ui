@@ -6,19 +6,17 @@ export default {
 
 	getHeaders () {
 		return this.getItem(this.key)
-		? { Authorization: `Token ${JSON.parse(window.localStorage.getItem('currentUser')).auth_token}` }
+		? { Authorization: `Token ${JSON.parse(this.getItem('currentUser')).auth_token}` }
 		: {}
 	},
 
 	handleLogin (value) {
 		this.setItem(this.key, JSON.stringify(value))
-		this.trigger(value)
 	},
 
 	handleLogout () {
 		this.setItem(this.key, "")
 		// window.localStorage.clear()
-		this.trigger(false)
 	},
 
 	checkLogin () {
@@ -35,16 +33,8 @@ export default {
 	},
 
 	getItem (key) {
-		window.localStorage.getItem(key)
+		return window.localStorage.getItem(key)
 	},
-
-	// getAuthUser: () => {
-	// 	return window.localStorage.getItem(this.key)
-	// },
-
-	// storeAuthUser: (userJSON) => {
-	// 	this.setItem(this.key, userJSON)
-	// },
 
 	showError (err) {
 		console.log("there was a problem")
