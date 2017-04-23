@@ -53,3 +53,30 @@ Use SASS to
 
 
 - https://github.com/kriasoft/isomorphic-style-loader#react-component-example
+
+
+https://en.wikipedia.org/wiki/Prototype-based_programming
+https://en.wikipedia.org/wiki/Smalltalk
+http://softwareengineering.stackexchange.com/questions/110936/what-are-the-advantages-of-prototype-based-oop-over-class-based-oop/110939#110939
+
+if (this.state.authUser !== undefined) {
+			console.log("this state authUser ------>", this.state.authUser)
+			right = (<div>
+				<p onClick={this.onShowLogout}>
+					<span><ButtonComponent label={ this.state.authUser.username } /></span>
+				</p>
+				{ logout }
+			</div>)
+		} else {
+			right = (<p>
+				<Link to="login">
+					<ButtonComponent label="Login" />
+				</Link>
+				<Link to="/register">
+					<ButtonComponent label="Register" />
+				</Link>
+			</p>)
+		}
+
+
+

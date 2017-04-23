@@ -1,14 +1,8 @@
-'use strict'
-import 'babel-polyfill'
-
-import React from 'react'
-import ReactDOM from 'react-dom'
-
-import Routes from './routes'
-
+'use strict';
+require("babel-polyfill");
+const ReactDOM = require("react-dom");
+const routes_1 = require("./routes");
 if (process.env.NODE_ENV === 'development') {
-  // Enable React devtools
-  window.React = React
 }
-
-ReactDOM.render(Routes, document.getElementById('app'))
+ReactDOM.render(routes_1.default, document.getElementById('app'));
+//# sourceMappingURL=index.js.map

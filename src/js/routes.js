@@ -1,27 +1,21 @@
-'use strict'
-
-import React from 'react'
+'use strict';
+const React = require("react");
 // import path from 'path'
-import {Router, Route, IndexRoute, browserHistory} from 'react-router'
-
-import App from './App'
-import HomePage from './components/HomePage'
-import SubforumPage from './components/SubforumPage'
-import PostPage from './components/PostPage'
-import UserLoginPage from './components/UserLoginPage'
-import UserRegistrationPage from './components/UserRegistrationPage'
-import NoMatch from './components/NoMatch'
-
-export default (
-  // Write the routes
-  <Router history={browserHistory}>
-    <Route path="/" component={App}>
-      <IndexRoute component={HomePage} />
-      <Route path="/" component={HomePage} />
-      <Route path="subforums/:id" component={SubforumPage} />
-      <Route path="posts/:id" component={PostPage} />
-      <Route path="/login" component={UserLoginPage} />
-      <Route path="/register" component={UserRegistrationPage} />
-    </Route>
-  </Router>
-)
+const react_router_1 = require("react-router");
+const App_1 = require("./App");
+const HomePage_1 = require("./components/HomePage");
+const SubforumPage_1 = require("./components/SubforumPage");
+const PostPage_1 = require("./components/PostPage");
+const UserLoginPage_1 = require("./components/UserLoginPage");
+const UserRegistrationPage_1 = require("./components/UserRegistrationPage");
+Object.defineProperty(exports, "__esModule", { value: true });
+// import NoMatch from './components/NoMatch'
+exports.default = (React.createElement(react_router_1.Router, { history: react_router_1.browserHistory },
+    React.createElement(react_router_1.Route, { path: "/", component: App_1.default },
+        React.createElement(react_router_1.IndexRoute, { component: HomePage_1.default }),
+        React.createElement(react_router_1.Route, { path: "/", component: HomePage_1.default }),
+        React.createElement(react_router_1.Route, { path: "subforums/:id", component: SubforumPage_1.default }),
+        React.createElement(react_router_1.Route, { path: "posts/:id", component: PostPage_1.default }),
+        React.createElement(react_router_1.Route, { path: "/login", component: UserLoginPage_1.default }),
+        React.createElement(react_router_1.Route, { path: "/register", component: UserRegistrationPage_1.default }))));
+//# sourceMappingURL=routes.js.map
